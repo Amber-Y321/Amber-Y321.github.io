@@ -38,14 +38,17 @@ The model consists of 3 parts: 19 LSTM subnetworks, 19 Temporal attention models
 For each LSTM subnetwork related to each body part:
 
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/74312026/154887844-d4352276-bc8d-411d-9962-50d0d8154303.png">
+
 #### 19 temporal attention models
 Each temporal attention model aims to extract key timestemps:
 
 <img width="521" alt="image" src="https://user-images.githubusercontent.com/74312026/154891764-845ee68d-cd71-41f8-986f-c5118bc02707.png">
+
 #### bodily attention models
 The bodily temporal attention model aims to extract key body parts:
 
 <img width="518" alt="image" src="https://user-images.githubusercontent.com/74312026/154892316-6b71d19c-ba1c-4662-9310-e257c2767bd4.png">
+
 #### The whole model flowchart
 
 <img width="631" alt="image" src="https://user-images.githubusercontent.com/74312026/154892419-b934b9db-a43e-4e23-ac04-437fbde9337d.png">
