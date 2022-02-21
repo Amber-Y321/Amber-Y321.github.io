@@ -16,8 +16,10 @@ Therefore, 19 keypoints are kept
 #### Data Interpolation
 Situation 1: there are 2 data points before and after the NAs, and not too many NAs in between
   then deal with linear interpolation
+
 Situation 2: only a few NAs at the begining rows
   then backward filling
+
 Situation 3: only a few NAs at the ending rows
   then forward filling
 #### Data Transformation
