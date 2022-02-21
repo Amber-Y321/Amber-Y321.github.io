@@ -65,11 +65,5 @@ F1 score = 0.89
 
 For predicted negative experience, we can consider them as negative with high probability; but the model has lower ability to predict positive experience,so more positive data is needed to improve the model to extract positive experience information. 
 
-
-
-
-
-
-
-
+## Reference
 https://github.com/CMU-Perceptual-Computing-Lab/openpose
