@@ -30,12 +30,30 @@ In total, we get 40 features including distances and angles. And all videos are 
 In each video JSON file, there are hundreds of timesteps. Since the model is aimed at conducting real-time recognition, all timestpes in each video JSON file are converted into some 10-timestep timeseries data to make sure that end-user could get real-time customer experience
 
 Method: Run a sliding window, length = 10 timesteps, overlapping ratio = 60%
+
 ## Modeling
 The model consists of 3 parts: 19 LSTM subnetworks, 19 Temporal attention models, 1 Bodily attention model
 19 represent 19 body parts, but there are some variables (angles and distances) used to describe different body part
 #### 19 LSTM subnetworks
-For each LSTM subnetwork:
+For each LSTM subnetwork related to each body part:
+
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/74312026/154887844-d4352276-bc8d-411d-9962-50d0d8154303.png">
+#### 19 temporal attention models
+Each temporal attention model aims to extract key timestemps:
+
+<img width="521" alt="image" src="https://user-images.githubusercontent.com/74312026/154891764-845ee68d-cd71-41f8-986f-c5118bc02707.png">
+#### bodily attention models
+The bodily temporal attention model aims to extract key body parts:
+
+<img width="518" alt="image" src="https://user-images.githubusercontent.com/74312026/154892316-6b71d19c-ba1c-4662-9310-e257c2767bd4.png">
+#### The whole model flowchart
+
+<img width="631" alt="image" src="https://user-images.githubusercontent.com/74312026/154892419-b934b9db-a43e-4e23-ac04-437fbde9337d.png">
+
+## Tunning Process
+
+## Results and Interpretation
+
 
 
 
