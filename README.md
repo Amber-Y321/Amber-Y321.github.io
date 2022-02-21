@@ -54,8 +54,16 @@ The bodily temporal attention model aims to extract key body parts:
 <img width="631" alt="image" src="https://user-images.githubusercontent.com/74312026/154892419-b934b9db-a43e-4e23-ac04-437fbde9337d.png">
 
 ## Tunning Process
+Adam optimizer: more intellignet since it could remember and store an exponentially decaying average of the past gradients and bring in a smoothening effect
+learning rate = 0.0001, epoch number = 70, batch size = 16
 
 ## Results and Interpretation
+Accuracy = 0.81
+Precision = 0.83
+Recall = 0.97
+F1 score = 0.89
+
+For predicted negative experience, we can consider them as negative with high probability; but the model has lower ability to predict positive experience,so more positive data is needed to improve the model to extract positive experience information. 
 
 
 
