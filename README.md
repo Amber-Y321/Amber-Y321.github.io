@@ -27,13 +27,16 @@ Distance: the distance between 2 Keypoints using Euclidean distance
 Angle: the angle between 2 distances using arccosine formula
 In total, we get 40 features including distances and angles. And all videos are split into 39 training videos and 5 testing videos
 #### Data Augmentation
-In each video JSON file, there are hundreds of timesteps. Since the model is aimed at conducting real-time recognition, all timestpes in each video JSON file are converted into some 10-timestep timeseries data. ??????no duplicates or with sliding window
+In each video JSON file, there are hundreds of timesteps. Since the model is aimed at conducting real-time recognition, all timestpes in each video JSON file are converted into some 10-timestep timeseries data to make sure that end-user could get real-time customer experience
 
+Method: Run a sliding window, length = 10 timesteps, overlapping ratio = 60%
 ## Modeling
 The model consists of 3 parts: 19 LSTM subnetworks, 19 Temporal attention models, 1 Bodily attention model
 19 represent 19 body parts, but there are some variables (angles and distances) used to describe different body part
 #### 19 LSTM subnetworks
 For each LSTM subnetwork:
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/74312026/154887844-d4352276-bc8d-411d-9962-50d0d8154303.png">
+
 
 
 
